@@ -1,0 +1,22 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: tyk-argocd-test
+  namespace: argocd
+spec:
+  project: default
+
+  source:
+    repoURL: https://gitlab.com/free54/tykcd.git
+    targetRevision: HEAD
+  destination: 
+    server: https://kubernetest.default.svc
+    namespace: tyk
+
+  syncPolicy:
+    syncOptions:
+    - CreateNamespace=false
+
+    automated:
+      selfHeal: true
+      prune: true
