@@ -23,3 +23,8 @@ Values.yaml
 
 https://gitlab.com/free54/tykcd/-/blob/main/values.yaml
 
+
+
+
+https://github.com/hblixt/argocd-example-apps
+
