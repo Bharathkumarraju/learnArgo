@@ -1,0 +1,16 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: hello-app
+spec:
+  destination:
+    name: ''
+    namespace: default
+    server: 'https://192.168.1.10:50615'
+  source:
+    path: hello_app
+    repoURL: 'https://github.com/Bharathkumarraju/bkr-argocd-private-repo'
+    targetRevision: HEAD
+  project: bharath-dev-argocd
+
+  

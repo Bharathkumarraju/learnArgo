@@ -1,0 +1,15 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: helm-demo
+spec:
+  destination:
+    name: ''
+    namespace: default
+    server: 'https://192.168.1.10:50615'
+  source:
+    path: ''
+    repoURL: 'https://charts.bitnami.com/bitnami'
+    targetRevision: 9.1.11
+    chart: apache
+  project: bharath-dev-argocd
